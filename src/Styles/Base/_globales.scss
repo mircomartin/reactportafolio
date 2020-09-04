@@ -1,0 +1,182 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	scroll-behavior: smooth;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+figure {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+	line-height: 20px;
+	background: $blancoBG;
+	font-family: $font-principal;
+	color: $negro1;
+}
+
+/* ------------------------- */
+/* Clases Generales */
+/* ------------------------- */
+.alert-danger {
+	color: $texto;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	width: 86px;
+}
+
+img {
+	vertical-align: top;
+}
+
+.img-fluid {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+.titulos-index {
+	line-height: 1.6rem;
+	font-weight: 600;
+	font-size: 1.5625rem;
+	color: $negro1;
+	font-family: $font-2;
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.parrafo {
+	margin-bottom: 20px;
+	text-align: justify;
+}
+
+.leer-mas {
+	color: $negro1;
+	font-family: $font-principal;
+	padding: 10px;
+	border: 1px solid $red;
+	transition: 0.1s ease all;
+	margin-top: 20px;
+	display: inline-block;
+	cursor: pointer;
+	&:hover {
+		color: $blanco;
+		background: $red;
+	}
+}
+
+.wrapper-red {
+	background: $red;
+	margin: 3.125rem 0;
+	padding: 2.5rem 0;
+	color: $blanco;
+}
+
+.wrapper-blue {
+	background: $azul url('/static/img/bg-section.jpg') scroll;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 2.5rem 0;
+	opacity: 0.95;
+}
+
+.titulos-h4 {
+	font-family: $font-2;
+	font-size: 1.375rem;
+	font-weight: 600;
+	margin: 1.25rem 0;
+}
+
+.titulo-seccion {
+	font-family: $font-2;
+	font-size: 35px;
+	color: $blanco;
+	font-weight: 700;
+	text-align: center;
+	padding: 152px 0 50px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 80px;
+		height: 3px;
+		position: absolute;
+		bottom: 5%;
+		left: calc(50% - 40px);
+		background: $red;
+	}
+}
+
+.redes-general {
+	a {
+		transition: 0.15s ease all;
+		color: $blanco;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.map {
+	width: 100%;
+	border: none;
+}
+
+main.secciones {
+	padding: 50px 0;
+}
+
+@media screen and (max-width: 992px) {
+	body {
+		font-size: 14px;
+	}
+
+	.titulos-index {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	.titulos-h4 {
+		font-size: 17px;
+		font-weight: 600;
+		margin: 18px 0;
+	}
+	.logo {
+		width: 46px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.parallax-particles {
+		.info {
+			.wrapper-saludo {
+				.saludo {
+					font-size: 70px;
+					line-height: 80px;
+				}
+			}
+		}
+	}
+	.logo {
+		width: 46px;
+	}
+	.parallax-trabajemos-juntos {
+		h3 {
+			line-height: 50px;
+		}
+	}
+}

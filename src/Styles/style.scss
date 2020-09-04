@@ -1,0 +1,15 @@
+//Variables
+@import "./Base/variables";
+//Estilos Globales
+@import "./Base/globales";
+
+//COMPONENTS
+@import "./Components/footer";
+@import "./Components/header";
+
+//PAGES
+@import "./Page/index";
+@import "./Page/contacto";
+@import "./Page/sobremi";
+@import "./Page/servicios";
+@import "./Page/portafolio";

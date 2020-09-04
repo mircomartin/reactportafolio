@@ -1,0 +1,327 @@
+/* ------------------------- */
+/* Particles */
+/* ------------------------- */
+.parallax-particles {
+	position: relative;
+	#tsparticles {
+		.tsparticles-canvas-el {
+			width: 100%;
+			height: 100vh !important;
+			background: url('/static/img/parallax.jpg'), rgba(0, 0, 0, 0.8);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: 50% 80%;
+			background-repeat: no-repeat;
+			opacity: 0.9;
+		}
+	}
+	.info {
+		position: absolute;
+		top: calc(50% - 40px);
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		.wrapper-saludo {
+			.saludo {
+				font-size: 140px;
+				line-height: 170px;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: $blanco;
+				margin: 0;
+			}
+		}
+	}
+	.detalleNombre {
+		width: 30%;
+		padding-left: 30px;
+		line-height: 55px;
+		p,
+		h1 {
+			text-transform: uppercase;
+			color: $blanco;
+		}
+		p:nth-child(1) {
+			font-size: 30px;
+		}
+		h1 {
+			font-size: 40px;
+			font-weight: 700;
+			margin: 0;
+		}
+		.element,
+		.typed-cursor {
+			color: $red;
+			font-size: 30px;
+			font-weight: 300;
+		}
+	}
+}
+
+/* ------------------------- */
+/* Sobre Mi - Index */
+/* ------------------------- */
+.sobre-mi-index {
+	padding-top: 50px;
+
+	p {
+		color: $texto;
+	}
+	.wrapper-sobreMi {
+		.img-sobreMi {
+			text-align: center;
+			align-self: center;
+		}
+	}
+}
+
+/* ------------------------- */
+/* Servicios - Index */
+/* ------------------------- */
+.servicios-index {
+	.titulos-index {
+		color: $blanco;
+	}
+	.titulos-h4 {
+		text-align: center;
+	}
+	i {
+		font-size: 40px;
+		text-align: center;
+		display: block;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* ------------------------- */
+/* Portfolio - Index */
+/* ------------------------- */
+.portfolio-index {
+	.wrapper-option {
+		margin-bottom: 20px;
+		.option {
+			position: relative;
+			overflow: hidden;
+			max-height: 300px;
+			cursor: pointer;
+			.overlay {
+				position: absolute;
+				width: 100%;
+				height: 0%;
+				top: 0;
+				left: 0;
+				right: 0;
+				background: $red;
+				overflow: hidden;
+				transition: 0.4s ease all;
+				padding: 0 20px;
+				.overlay-texto {
+					top: 50%;
+					left: 50%;
+					position: absolute;
+					white-space: nowrap;
+					font-size: 1.125rem;
+					transform: translate(-50%, -50%);
+					overflow: hidden;
+					border-top: 1px solid $blanco;
+					border-bottom: 1px solid $blanco;
+					a {
+						color: $blanco;
+						display: inline-block;
+						padding: 10px 0;
+						font-family: $font-2;
+					}
+				}
+			}
+			&:hover .overlay {
+				height: 100%;
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+/* ------------------------- */
+/* Trabajemos Juntos Prallax */
+/* ------------------------- */
+.parallax-trabajemos-juntos {
+	width: 100%;
+	height: 300px;
+	background-image: url('/static/img/trabajemosjuntos.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: $blanco;
+	font-family: $font-2;
+	h3 {
+		font-size: 35px;
+		font-weight: 700;
+	}
+	p {
+		margin-top: 25px;
+		font-weight: 700;
+	}
+}
+
+/* ------------------------- */
+/* Secc Elegirme */
+/* ------------------------- */
+.elegirme {
+	.titulos-index {
+		color: #fff;
+	}
+	.elegirme-info {
+		.info-icono {
+			i {
+				font-size: 40px;
+			}
+		}
+	}
+}
+
+/* ------------------------- */
+/* Contacto */
+/* ------------------------- */
+.contacto-index {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	p {
+		color: $texto;
+		margin-bottom: 20px;
+	}
+	.contacto-info {
+		i {
+			color: $red;
+		}
+	}
+	.formulario {
+		color: $texto;
+		.form-group {
+			margin-bottom: 20px;
+			input,
+			textarea {
+				border: 1px solid #ced4da;
+				width: 100%;
+				padding: 5px;
+				line-height: 1.15px;
+				color: $texto;
+			}
+			textarea {
+				padding: 15px;
+				height: 200px;
+				min-height: 200px;
+				max-height: 400px;
+			}
+			label {
+				padding: 6px;
+				border-left: 1px solid #ced4da;
+				border-top: 1px solid #ced4da;
+				border-bottom: 1px solid #ced4da;
+			}
+			.boton-enviar {
+				padding: 10px;
+				border: 1px solid $red;
+				-webkit-transition: 0.1s ease all;
+				transition: 0.1s ease all;
+				margin-top: 20px;
+				cursor: pointer;
+				&:hover {
+					color: #fff;
+					background: $red;
+				}
+			}
+			.form-nombre-email,
+			.form-asunto {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	//PARALLAX
+	.parallax-particles {
+		.info {
+			flex-direction: column;
+			text-align: center;
+		}
+		.detalleNombre {
+			width: 100%;
+			padding-left: 0px;
+		}
+	}
+
+	//Sobre-mi INDEX
+	.sobre-mi-index {
+		.wrapper-sobreMi {
+			.img-sobreMi {
+				margin-bottom: 3.125em;
+			}
+		}
+	}
+
+	//Servicios INDEX
+	.servicios-index {
+		.servicio-individual {
+			margin-bottom: 20px;
+		}
+	}
+
+	//Elegirme index
+	.elegirme {
+		.elegirme-img {
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		.elegirme-info {
+			display: flex;
+			flex-direction: column;
+			.info-body {
+				.titulos-h4 {
+					text-align: center;
+				}
+				p {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	//contacto index
+	.contacto-index {
+		font-size: 16px;
+		.formulario {
+			margin-top: 30px;
+			.form-group {
+				.form-nombre-email:first-child {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.parallax-particles {
+		.info {
+			.wrapper-saludo {
+				.saludo {
+					font-size: 70px;
+					line-height: 80px;
+				}
+			}
+		}
+	}
+
+	.parallax-trabajemos-juntos {
+		h3 {
+			line-height: 50px;
+		}
+	}
+}

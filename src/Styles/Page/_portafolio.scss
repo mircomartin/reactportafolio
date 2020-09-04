@@ -1,0 +1,81 @@
+.portafolio {
+	.detalles-proyecto {
+		p {
+			margin-bottom: 20px;
+			color: $texto;
+		}
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	a {
+		i {
+			color: $red;
+		}
+	}
+}
+
+/* ------------------------- */
+/* Carousel */
+/* ------------------------- */
+
+.glider {
+	overflow: hidden;
+}
+
+.glider-prev,
+.glider-next {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border: none;
+	top: calc(50% - 30px);
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	color: $red;
+	opacity: 20%;
+	font-size: 30px;
+	&:hover,
+	&:hover {
+		opacity: 100%;
+	}
+}
+
+.glider-prev {
+	left: 0px;
+	z-index: 999;
+}
+
+.glider-next {
+	right: 0px;
+	z-index: 999;
+}
+
+.carousel__lista {
+	overflow: hidden;
+}
+
+.carousel__elemento {
+	text-align: center;
+}
+
+.glider-dots {
+	margin-top: 20px;
+	.glider-dot {
+		display: block;
+		width: 30px;
+		height: 4px;
+		background: $red;
+		opacity: 0.2;
+		border-radius: 0;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	.glider-dot.active {
+		opacity: 1;
+	}
+}

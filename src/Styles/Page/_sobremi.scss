@@ -1,0 +1,94 @@
+.sobremi {
+	p {
+		margin-bottom: 20px;
+		color: $texto;
+	}
+	.title-skills {
+		font-size: 25px;
+		border-bottom: 1px solid $negro1;
+		padding: 20px 0;
+		font-family: $font-2;
+		margin-bottom: 30px;
+	}
+	i {
+		font-size: 40px;
+	}
+}
+
+.bar {
+	margin-top: 20px;
+}
+.skill {
+	font-size: 0.8em;
+	text-transform: uppercase;
+	margin-bottom: 0.25em;
+	color: $texto;
+}
+
+.speech-bubble {
+	font-size: 0.75em;
+	line-height: 2em;
+	position: absolute;
+	top: -2.7em;
+	text-align: center;
+	min-width: 3em;
+	border-radius: 0.3em;
+	display: none;
+}
+
+.html {
+	left: calc(90% - 1.5em);
+}
+
+.js {
+	left: calc(50% - 1.5em);
+}
+
+.re {
+	left: calc(40% - 1.5em);
+}
+
+.wp {
+	left: calc(80% - 1.5em);
+}
+
+.speech-bubble:after {
+	border: 0.5em solid transparent;
+	content: '';
+	margin-left: -0.5em;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+}
+
+.bar-outer {
+	height: 1em;
+	background: #c2c2c2;
+	position: relative;
+	border-radius: 0.3em;
+}
+
+.bar-inner {
+	width: 0;
+	height: 1em;
+	border-radius: 0.3em;
+}
+
+.ht,
+.html,
+.js,
+.jq,
+.re,
+.rs,
+.wp,
+.wq {
+	background: $red;
+	color: $blancoBG;
+}
+
+.html:after,
+.js:after,
+.re:after,
+.wp:after {
+	border-top-color: $red;
+}
