@@ -20,9 +20,7 @@ const Portafolio = () => {
 			<main className="secciones">
 				<section className="container portafolio" data-aos="fade-up">
 					<div className="row">
-
-						<Carousel/>
-
+						<Carousel />
 					</div>
 					<div className="row align-items-center">
 						<div className="col-12 order-1 col-md-4 order-md-0 mb-5 mb-md-0">
@@ -55,14 +53,20 @@ const Portafolio = () => {
 						<div className="col-12 order-1 col-md-8 order-md-1 detalles-proyecto">
 							<h4 className="titulos-index">Licenciada Mariel Leone</h4>
 							<p>
-								Cuando Mariel me contacto, creo que conectamos de inmediato, la idea que me planteo me 
-								parecio un gran desafio. El poder desarrollarlo, tal cual lo indicaba ella con todos los detalles
-								desde colores hasta tener un Blog de entradas autoadministrable (sin tener conocimientos de manejo de PC).
+								Cuando Mariel me contacto, creo que conectamos de
+								inmediato, la idea que me planteo me parecio un gran
+								desafio. El poder desarrollarlo, tal cual lo indicaba ella
+								con todos los detalles desde colores hasta tener un Blog
+								de entradas autoadministrable (sin tener conocimientos de
+								manejo de PC).
 							</p>
 							<p>
-								Mariel es Licenciada en Nutricion, actualmente esta haciendo muchos estudios sobre el deporte, ademas de ser muy joven
-								es muy influyente en la redes y en la ciudad de Rosario, es Nutricionista del plantel de Rosario Central de Fubtol Juvenil,
-								y una persona muy influyente en sus redes.
+								Mariel es Licenciada en Nutricion, actualmente esta
+								haciendo muchos estudios sobre el deporte, ademas de ser
+								muy joven es muy influyente en la redes y en la ciudad de
+								Rosario, es Nutricionista del plantel de Rosario Central
+								de Fubtol Juvenil, y una persona muy influyente en sus
+								redes.
 							</p>
 						</div>
 					</div>

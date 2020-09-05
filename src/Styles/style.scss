@@ -6,6 +6,7 @@
 //COMPONENTS
 @import "./Components/footer";
 @import "./Components/header";
+@import "./Components/spinner";
 
 //PAGES
 @import "./Page/index";
@@ -13,3 +14,5 @@
 @import "./Page/sobremi";
 @import "./Page/servicios";
 @import "./Page/portafolio";
+@import "./Page/blog";
+@import "./Page/auth";

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { navigate } from '@reach/router';
 
+//Componentes
 import { expresiones, errores } from '../Components/SubComponents/Data';
 import Error from '../Components/SubComponents/Error';
 import WrapperBlue from '../Components/WrapperBlue';
@@ -14,9 +14,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 //Firebase
-import { db } from '../Firebase/firebase-config';
+import { db } from '../firebase/firebase-config';
 
-const Contacto = () => {
+const Contacto = ({history}) => {
 	//Inicializo
 	AOS.init();
 
@@ -60,15 +60,20 @@ const Contacto = () => {
 			return;
 		}
 
-		//submit a firestore
-		await db.collection("Mails").add(formvalues);
-
-		//Msg Exito
-		Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+		try {
+			//submit a firestore
+			await db.collection("Mails").add(formvalues);
+	
+			//Msg Exito
+			Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+		} catch (error) {	
+			console.log(error)
+			Swal.fire('Error!', 'La consulta no fue enviada!', 'error');
+		}
 
 		setTimeout(() => {
 			//Redirecciono a index
-			navigate('/');
+			history.push('/');
 		}, 2000);
 	};
 

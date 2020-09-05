@@ -36,12 +36,12 @@
 	text-align: center;
 	background: none;
 	color: $red;
-	opacity: 20%;
 	font-size: 30px;
-	&:hover,
-	&:hover {
-		opacity: 100%;
-	}
+}
+
+.glider-prev:hover,
+.glider-next:hover {
+	opacity: 100%;
 }
 
 .glider-prev {

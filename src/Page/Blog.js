@@ -1,32 +1,38 @@
 import React, { useState, useEffect } from 'react';
 
+//Components
 import WrapperBlue from '../Components/WrapperBlue';
-import { SingleNoticia } from '../Components/SubComponents/SingleNoticia';
+import { NewsScreen } from '../Components/SubComponents/NewsScreen';
 import { loadNews } from '../helpers/loadNews';
+import { Spinner } from '../Components/SubComponents/Spinner';
 
 export const Blog = () => {
 	const [news, setNews] = useState([]);
 
-	const listarProductos = async () => {
+	const listarNoticias = async () => {
 		const resp = await loadNews();
 		setNews(resp);
 	};
 
 	useEffect(() => {
-		listarProductos();
+		listarNoticias();
 	}, []);
 
 	return (
 		<>
 			<WrapperBlue titulo="Blog" />
 
-			<main className="container">
-				<div className="row py-4 blog justify-content-around">
-					{news.map((noticia) => (
-						<SingleNoticia key={noticia.id} noticia={noticia} />
-					))}
-				</div>
-			</main>
+			{news.length === 0 ? (
+				<Spinner />
+			) : (
+				<main className="container mt-4">
+					<div className="row blog justify-content-around">
+						{news.map((noticia) => (
+							<NewsScreen key={noticia.id} noticia={noticia} />
+						))}
+					</div>
+				</main>
+			)}
 		</>
 	);
 };

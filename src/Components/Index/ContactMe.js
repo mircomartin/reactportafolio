@@ -12,7 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 //Firebase
-import { db } from '../../Firebase/firebase-config';
+import { db } from '../../firebase/firebase-config';
 
 export default function ContactMe() {
 	//Inicializo
@@ -60,11 +60,15 @@ export default function ContactMe() {
 			return;
 		}
 
-		//submit a firestore
-		await db.collection("Mails").add(formvalues);
-
-		//Msg Exito
-		Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+		try {
+			//submit a firestore
+			await db.collection("Mails").add(formvalues);
+	
+			//Msg Exito
+			Swal.fire('Buen Trabajo!', 'La consulta fue enviada!', 'success');
+		} catch (error) {
+			console.log(error)
+		}
 
 		//Reset
 		reset();

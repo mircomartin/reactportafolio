@@ -1,0 +1,22 @@
+.auth {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    &__input,
+    &__textarea {
+        margin-bottom: 30px;
+        width: 100%;
+        display: inline-block;
+        background-color: $blancoBG;
+        color: $texto;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid $texto;
+        &:focus {
+            border-bottom: 2px solid $red;
+        }
+    }
+    &__textarea {
+        height: 500px;
+        min-height: 500px;
+    }
+}

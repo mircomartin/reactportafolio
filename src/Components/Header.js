@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { Link } from '@reach/router';
+import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
-	
 	//Menu Responsive
 	const close = () => {
 		if (window.innerWidth <= 768) {
 			const enlace = document.querySelector('#enlaces');
-			enlace.slideToggle()
+			enlace.slideToggle();
 		}
 	};
 
@@ -29,34 +28,34 @@ const Header = () => {
 					</figure>
 					<ul className="menu col-12 col-md-9" id="enlaces">
 						<li>
-							<Link to="/" onClick={close}>
+							<NavLink exact to="/" onClick={close}>
 								Inicio
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/sobremi" onClick={close}>
+							<NavLink exact to="/sobremi" onClick={close}>
 								Sobre mi
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/servicios" onClick={close}>
+							<NavLink exact to="/servicios" onClick={close}>
 								Servicios
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/portafolio" onClick={close}>
+							<NavLink exact to="/portafolio" onClick={close}>
 								Portafolio
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/blog" onClick={close}>
+							<NavLink exact to="/blog" onClick={close}>
 								Blog
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link to="/contacto" onClick={close}>
+							<NavLink exact to="/contacto" onClick={close}>
 								Contacto
-							</Link>
+							</NavLink>
 						</li>
 					</ul>
 					<section className="col-auto redes-sociales d-none d-lg-block">
