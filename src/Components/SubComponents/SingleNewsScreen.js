@@ -23,7 +23,7 @@ export const SingleNewsScreen = () => {
 		newsActive(id);
 	}, [id]);
 
-	const { title, body, date, img } = notice;
+    const { title, body, date, img } = notice;
 
 	moment.locale('es');
 	const newsDate = moment(date);
@@ -31,8 +31,8 @@ export const SingleNewsScreen = () => {
 	const newsActive = async (id) => {
 		try {
 			const newsQuery = await db.collection('news').doc(id);
-
-			const news = await newsQuery.get();
+            const news = await newsQuery.get();
+            
 			setNotice(news.data());
 		} catch (error) {
 			console.log(error);

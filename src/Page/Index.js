@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Particle from './../Components/Index/Particles';
-import About from './../Components/Index/About';
-import Services from './../Components/Index/Services';
-import PortafolioSection from './../Components/Index/PortafolioSection';
-import Elegirme from './../Components/Index/Elegirme';
-import ContactMe from './../Components/Index/ContactMe';
+//Components
+import Particle from './../components/index/Particles';
+import About from './../components/index/About';
+import Services from './../components/index/Services';
+import PortafolioSection from './../components/index/PortafolioSection';
+import Elegirme from './../components/index/Elegirme';
+import ContactMe from './../components/index/ContactMe';
 
 const Index = () => {
 	return (

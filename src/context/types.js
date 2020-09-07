@@ -1,2 +1,7 @@
-export const LOGIN = 'LOGIN';
-export const LOGOUT = 'LOGOUT';
+export const types={
+    login: '[auth] Login',
+    logout: '[auth] Logout',
+
+    newNotice: '[news] Nueva Noticia',
+    listNews: '[news] Listar Noticias',
+}

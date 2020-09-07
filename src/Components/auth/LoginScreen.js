@@ -1,18 +1,14 @@
 import React, { useContext } from 'react';
 
-//Firebase
-import { firebase } from './../../firebase/firebase-config';
-
 //Context
 import { AuthContext } from '../../context/AuthContext';
-import { LOGIN } from './../../context/types';
 
 //Components
 import { useForm } from '../../hooks/useForm';
 import WrapperBlue from './../WrapperBlue';
 
 export const LoginScreen = () => {
-	const { dispatch } = useContext(AuthContext);
+	const { startLoginUser } = useContext(AuthContext)
 
 	const [formValues, handleInputChange] = useForm({
 		email: '',
@@ -21,30 +17,10 @@ export const LoginScreen = () => {
 
 	const { email, password } = formValues;
 
-	const handleLogin = async (e) => {
+	const handleLogin = (e) => {
 		e.preventDefault();
 
-		try {
-			const resp = await firebase
-				.auth()
-				.signInWithEmailAndPassword(email, password);
-
-			const { user } = resp;
-			await user.updateProfile({ displayName: 'Mirco' });
-
-			const uid = user.uid;
-			const name = user.displayName;
-
-			dispatch({
-				type: LOGIN,
-				payload: {
-					uid,
-					name,
-				},
-			});
-		} catch (error) {
-			console.log(error);
-		}
+		startLoginUser( email, password )
 	};
 
 	return (
@@ -54,7 +30,7 @@ export const LoginScreen = () => {
 			<main className="container auth">
 				<div className="row justify-content-center">
 					<div className="col-6">
-						<form onSubmit={handleLogin} noValidate>
+						<form onSubmit={handleLogin}>
 							<div className="form-group">
 								<input
 									className="auth__input"

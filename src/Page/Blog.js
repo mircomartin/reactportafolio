@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 //Components
-import WrapperBlue from '../Components/WrapperBlue';
-import { NewsScreen } from '../Components/SubComponents/NewsScreen';
-import { loadNews } from '../helpers/loadNews';
-import { Spinner } from '../Components/SubComponents/Spinner';
+import WrapperBlue from '../components/WrapperBlue';
+import { NewsScreen } from '../components/subcomponents/NewsScreen';
+import { Spinner } from '../components/subcomponents/Spinner';
+
+//Context
+import { AuthContext } from '../context/AuthContext';
 
 export const Blog = () => {
-	const [news, setNews] = useState([]);
-
-	const listarNoticias = async () => {
-		const resp = await loadNews();
-		setNews(resp);
-	};
+	const { news, startListNews } = useContext(AuthContext)
 
 	useEffect(() => {
-		listarNoticias();
+		startListNews();
+		// eslint-disable-next-line
 	}, []);
 
 	return (

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
 //Componentes
-import { expresiones, errores } from '../Components/SubComponents/Data';
-import Error from '../Components/SubComponents/Error';
-import WrapperBlue from '../Components/WrapperBlue';
+import { expresiones, errores } from '../components/subcomponents/Data';
+import Error from '../components/subcomponents/Error';
+import WrapperBlue from '../components/WrapperBlue';
 import { useForm } from '../hooks/useForm';
 
 //Alerta de confirmacion de envio

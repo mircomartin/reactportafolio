@@ -1,23 +1,15 @@
 import React, {useContext} from 'react';
 
-//Sweet Alert 2
-import Swal from 'sweetalert2';
-
-//Firebase
-import { firebase, db } from './../../firebase/firebase-config'
-
 //Context
 import { AuthContext } from '../../context/AuthContext';
-import { LOGOUT } from '../../context/types';
 
 //Components
 import WrapperBlue from './../WrapperBlue';
 import { useForm } from '../../hooks/useForm';
-import { fileUpload } from '../../helpers/fileUpload';
 
 export const Intranet = ({history}) => {
 
-    const { dispatch, user } = useContext(AuthContext)
+    const { startLogout, startCreateNotice, user } = useContext(AuthContext)
 
     const [formValues, handleInputChange, reset] = useForm({
         title: '',
@@ -35,59 +27,24 @@ export const Intranet = ({history}) => {
 		}
 	};
     
-    const handleLogout = async () => {
+    const handleLogout = () => {
 
-        try {
-            await firebase
-                        .auth()
-                        .signOut()
-            dispatch({
-                type: LOGOUT
-            })
-        } catch (error) {
-            console.log(error)
-        }
+        startLogout();
 
         history.replace('/auth/login')
     }
 
-    const handleCreateNews = async (e) => {
+    const handleCreateNews = (e) => {
         e.preventDefault()
 
-        try {
-
-            if (!formValues.img) {
-				formValues.img = '';
-			} else {
-                const imgUrl = await fileUpload(formValues.img);
-                formValues.img = imgUrl
-			}
-            
-            const newPost = {
-                title,
-                subtitle,
-                img: formValues.img,
-                body,
-                date: new Date().getTime(),
-                user,
-            } 
-
-            //submit a firestore
-			await db.collection("news").add(newPost);
-	
-			//Msg Exito
-			Swal.fire('Buen Trabajo!', 'La noticia fue cargada!', 'success');
-        } catch (error) {
-            console.log(error)
-            Swal.fire('ERROR', 'La noticia no pudo ser cargada!', 'error');
-        }
+        startCreateNotice(formValues, user)
 
         reset();
     }
 
 	return (
 		<>
-			<WrapperBlue titulo={`Hola: ${user.name}`}/>
+			<WrapperBlue titulo={`Hola: ${user?.name}`}/>
 
 			<main className="container auth">
                 <div className="row mb-5">

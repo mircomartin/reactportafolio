@@ -2,7 +2,7 @@ import React from 'react';
 
 import Particles from 'react-particles-js';
 
-const Particulas = () => {
+export const Particulas = () => {
 	return (
 		<Particles
 			params={{
@@ -135,5 +135,3 @@ const Particulas = () => {
 		/>
 	);
 };
-
-export default Particulas;

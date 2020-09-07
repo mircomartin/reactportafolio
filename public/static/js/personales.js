@@ -9,7 +9,6 @@ $(document).on('scroll', function () {
 
 	$.each(skills, function (key, value) {
 		var skillbar = $('.' + key);
-
 		skillbar.animate(
 			{
 				width: value + '%',

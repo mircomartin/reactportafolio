@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 //App Principal
 import './Styles/style.scss';
-import App from './App';
+import AppPortfolio from './AppPortfolio';
 
 ReactDOM.render(
-	<App />,
+	<AppPortfolio />,
 	document.getElementById('root'),
 );

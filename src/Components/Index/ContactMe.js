@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 
+//Components
 import { useForm } from '../../hooks/useForm';
-import { expresiones, errores } from '../SubComponents/Data';
-import Error from '../SubComponents/Error';
+import { expresiones, errores } from '../subcomponents/Data';
+import Error from '../subcomponents/Error';
 
 //Alerta de confirmacion de envio
 import Swal from 'sweetalert2';

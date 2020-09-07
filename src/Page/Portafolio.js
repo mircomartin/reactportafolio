@@ -1,13 +1,13 @@
 import React from 'react';
 
-import WrapperBlue from '../Components/WrapperBlue';
+import WrapperBlue from '../components/WrapperBlue';
 
 //Aos Bblioteca JS
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 //Carousel
-import Carousel from './../Components/SubComponents/Carousel';
+import Carousel from './../components/subcomponents/Carousel';
 
 const Portafolio = () => {
 	//Inicializo
